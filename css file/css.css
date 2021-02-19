@@ -1,0 +1,844 @@
+*{
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    /*-webkit-user-select: none;
+    user-select: none;*/
+    
+}
+::selection {
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+}
+#mainContainer{
+    position:relative;
+    background-color: rgb(223, 223, 223);
+    display: none;
+}
+#container{
+    margin:auto;
+    width:1170px;
+}
+.fonty{
+    line-height:1.6;
+    padding:0px 10px 0px 0px;
+    color:#000000
+}
+.clearfix{
+    clear:right;
+}
+#upIcon{
+    font-size: 65px;
+    color: #009f4e;
+    position: absolute;
+    top: 630px;
+    left: 0px;
+    margin: 0;
+    padding: 17px;
+    z-index: 12;
+    opacity: 0.6;
+    position:fixed;
+    transition:all 0.5s ease-in-out;
+    display:none;
+}
+#upIcon:hover{
+    opacity:1;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+    transform: translate(0px,-20px);
+}
+/*start loading*/
+#load{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:600px;
+    height:300px;
+    overflow:hidden;
+}
+#load #threee{
+    position: absolute;
+    width:50px;height:50px;top:40px;left:50%;
+    transform:translate(-65%,-20%);
+    text-align: center;
+    padding-top:15px;
+    font-size:50px;
+    font-weight:bold ;
+    color:#2ECC71;
+}
+#load #twoo{
+    width:100%;
+    position:relative;
+    top:65%;
+    
+}
+#load div button{
+    width:180px;
+    height:70px;
+    font-weight:bold;
+    font-size:20px;
+    background: none;
+    color:#2DCC70;
+    border:4px solid #444444;
+    border-radius:7px;
+    perspective: 600px;
+    transition:all 0.5s ease-in-out;
+    position:absolute;
+    top:0; left:0px;
+}
+#load div #op{
+    position: relative;
+    width:35%;
+    float:left;
+    left:13%;
+}
+#load div #im{
+    position: relative;
+    width:35%;
+    float:right;
+    left:-13%;
+}
+#load button:hover{
+    color:#444444;
+    background-color:#2DCC70;
+    transform:scale(1.2);
+    cursor:pointer
+}
+#load #onee{
+    width:80px;
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-120%);
+}
+#load span{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    background:#2DCC70;
+    border-radius:50%;
+    position: relative;
+    animation-name:loady;
+    animation-delay: 0s;
+    animation-duration: 0.6s;
+    animation-iteration-count:infinite; 
+    margin-left:-5px;
+    
+}
+#load span:first-of-type{
+    animation-delay: 0s;
+}
+#load span:nth-of-type(2){
+    animation-delay: 0.1s;
+}
+#load span:nth-of-type(3){
+    animation-delay: 0.2s;
+}
+#load span:last-of-type{
+    animation-delay: 0.3s;
+}
+@keyframes loady{
+    0%,100%{
+        transform:translateY(-10px);
+        opacity: 1;
+    }
+    50%{
+        transform:translateY(10px);
+        background-color:#444444
+    }
+}
+/*End loading*/
+
+
+/*start list*/
+#list #container div{
+    width:400px;
+    background-color:#252F31;
+    height:600px;
+    position:absolute;
+    top:0px;
+    right:-400px;
+    z-index:10;
+    border:3px double #2ECC71;
+    border-radius:4px;
+    position: fixed;
+    
+}
+#list #container i{
+    float:right;
+    position: fixed;
+    right: 37px;
+    top: 25px;
+    z-index:11;
+    color:#2ECC71;
+}
+#list #container #one:hover{
+    cursor: pointer;
+    background-color:#252F31;
+    border-radius:5px;
+    padding:3px 8px;
+}
+#list #container #two:hover{
+    cursor: pointer;
+    background-color:#252F31;
+    border-radius:5px;
+    padding:3px 8px;
+}
+#list #container #two{
+    display: none;
+}
+#list #container ul{
+    list-style: none;
+    margin:20px 10px;
+}
+#list #container ul a{
+    text-decoration: none;
+    color:white;
+    font-size:30px;
+    line-height: 2;
+}
+#list #container ul a:hover{
+    color:#2ECC71;
+    margin-left:10px;
+}
+#list #container ul a::before{
+    content:"|";
+    color:#2ECC71;
+    font-size: 40px;
+    font-weight: bold;
+}
+/*end list*/
+
+/*Start Header slider*/
+#slider{
+    overflow: hidden;
+    width:auto;
+    height:600px;
+    position:relative;
+    z-index: 1;
+}
+#slider #imge{
+    width:auto;
+    height:600px;
+    background-image:url(../pics/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed ;
+    filter:blur(6px);
+}
+#slider h1{
+    margin:0px;
+    border-top:4px solid #2ECC71;
+    border-bottom:4px solid #2ECC71;
+    color:#252F31;
+    font-weight:bold;
+    font-size:60px;
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%)
+}
+#slider button{
+    position:absolute;
+    top:65%;left:50%;
+    transform:translate(-35%,50%);
+    width:130px;
+    height:50px;
+    border:3px solid#2ECC71;
+    background: none;
+    color:#252F31;
+    font-size: 22px;
+    overflow:hidden;
+    z-index: 1;
+}
+#slider button:hover{
+    cursor:pointer;
+    transition:background-color 0.2s ease-out;
+    border:3px solid #252F31;
+    border-radius: 2px;
+    background-position-x: left;
+    color:white;
+    transition: all 0.5s ease-in-out;
+} 
+#slider button span{
+    width:  0px;
+    height:50px;
+    display: block;
+    background-color: #2ECC71;
+    position:absolute;
+    top:0px;left:0px;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+#slider button:hover span{
+    width:100%;
+}
+/*End Header slider*/
+
+
+/*Start nav*/
+#nav{
+    overflow: hidden;
+    background-color:#252F31;
+    height:70px;
+    color:white;
+    position:relative;
+    z-index:2;
+}
+#nav p{
+    float:left;
+    margin:18px;
+    font-size:30px;
+}
+#nav p span{
+    color:#2ECC71
+}
+#nav .one{
+    float:right;
+    list-style: none;
+    text-decoration: none;
+    margin:22px;
+    font-size:20px;
+}
+#nav .one li{
+    display: inline;
+}
+#nav .one li a{
+    text-decoration: none;
+    color:white;
+}
+#nav .one li a:hover{
+    color:#2ECC71;
+    cursor: pointer;
+}
+#nav .one li #one{
+    color:#2ECC71;
+}
+#nav .one li:after{
+    content:" | "
+}
+
+#nav .one :last-of-type:after{
+    content: "";
+}
+/*End nav*/
+
+
+/*Start features*/
+#features{
+    height:200px;
+    background-color:white;
+    overflow:hidden;
+    position:relative;
+    z-index:3;
+}
+#features #container div{
+width:33.33333%;
+float: right;
+margin:10px auto;
+}
+#features #container div p{
+    line-height:1.6;
+    padding:0px 10px 0px 0px;
+    color:#747474
+}
+#features #container div h3 {
+    font-size:28px;
+    color:#5c5b5b;
+}
+
+/*End features*/
+
+/*Start about me*/
+#aboutMe{
+    background-color:#F2F2F2;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    perspective: 10000px;
+}
+#aboutMe #container{
+    position:relative;
+}
+#aboutMe #container #both{
+    height: 500px;
+    width:528.85px;
+    float: left;
+    transition:all 1s ease-in-out;
+    position:relative;
+    transform-style:preserve-3d;
+    
+}
+#aboutMe #container #both:hover{
+    transform:rotateY(180deg);
+}
+#aboutMe #container #both div,#aboutMe #container #both div img{
+    height: 500px;
+    width:528.85px;
+    margin-top: 5px;
+    border-radius: 30px;
+    position:absolute;
+    top:0px;left:0px;
+    transition:all 1s ease-in-out;
+}
+#aboutMe #container #both img{
+    z-index: 2;
+    backface-visibility: hidden;
+}
+#aboutMe #container #both #clock{
+    background-color:linear-gradient(rgb(0, 55, 71), rgb(0, 120, 156rgb(0, 195, 255)1));
+    transform: rotatey(180deg);
+    backface-visibility:hidden;
+    z-index:1;
+    position:relative;
+    padding-left: 66px;
+    padding-top: 16px;
+}
+#aboutMe #container #both #clock span{
+    width:100px;
+    height:100px;
+    display:inline-block;
+    background-color:#2ECC71;
+    border-radius: 50%;
+    margin: 38% 14.3px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 3.4;
+    color: white;
+    font-weight: bold;
+
+}
+#aboutMe #container div h2{
+    color:#777777;
+    font-size:31px;
+}
+#aboutMe #container div #icons{
+    width:100%;
+}
+#aboutMe #container div #icons div{
+    position:relative;
+    overflow:hidden;
+    width:50%;
+}
+#aboutMe #container div #icons div #one{
+    width: 15%;float:left; margin-top:30px;margin-right:14px;
+}
+#aboutMe #container div #icons div #two{
+    width: 80%;float:right;
+}
+#aboutMe #container div #icons div h3{
+    color:#777777;
+    font-size:22px;
+}
+#aboutMe #container div #icons div p{
+    line-height:1.6;
+    padding:0px 10px 0px 0px;
+    color:#97998F
+}
+
+#aboutMe #container #somo,#icons .a{
+    float:right;
+    width:50%;
+}
+
+/*End about me*/
+
+/*Start my skills*/
+#skills{
+    height:400px;
+    background-color:white;
+    overflow:hidden;
+    width:100%;
+    position:relative;
+}
+#skills #container #one {
+    float:left;
+    width:50%;
+    margin:20px auto
+}
+#skills #container #one p{
+    line-height:1.6;
+    padding:0px 10px 0px 0px;
+    color:#97998F
+}
+#skills #container #one button{
+    width:150px;
+    height:50px;
+    border:1px solid white;
+    background: none;
+    color: #2ECC71;
+    font-weight:bold;
+    font-size:20px;
+    border:2px solid #2ECC71;
+}
+#skills #container #one button:hover{
+    background-color: #f0f0f0;
+    border:5px solid #2ECC71;
+    border-radius: 2px;
+    transition:all 0.2s ease-in-out;
+    cursor:pointer;
+}
+#skills #container #one button a{
+    text-decoration: none;
+    color: #2ECC71;
+}
+#skills #container #two {
+    float:right;
+    width:50%;
+    margin:20px auto
+}
+#skills #container #two h3{
+    color:#777777;
+}
+#skills #container #two div{
+    width:500px;
+    height:30px;
+    margin:5px;
+    background:#F2F2F2;
+    overflow: hidden;
+}
+#skills #container #two ul{
+    list-style: none;
+    
+}
+#skills #container #two div span{
+    background-color: #2DCC70;
+    height:30px;
+    display: block;
+    overflow: hidden;
+}
+#skills #container #two div span span{
+    float:right;
+    margin:6px;
+    color:white;
+}
+#skills #container #two div span:hover{
+    transform: translate(-450px ,0px);
+    transition:all 1s ease-in-out;
+    background-color: white;;
+}
+#skills #container #two div span:hover span{
+    background-color:white;
+    transition:all 1s ease-in-out;
+}
+/*End my skills*/
+
+
+/*Start Resume*/
+#resume{
+    margin:0px;
+    height:250px;
+    background-color:F2F2F2;
+    overflow:hidden;
+    text-align:center;
+    position:relative;
+}
+#resume #container{
+    margin:40px auto;
+}
+#resume #container h2{
+    color:#383838;
+}
+#resume #container p{
+    line-height:1.6;
+    padding:0px 10px 0px 0px;
+    color:#707070
+}
+#resume #container button{
+    width:250px;
+    height:50px;
+    background:none;
+    border:3px solid #2DCC70;
+    font-weight: bold ;
+    color:#383838;
+    margin-top:10px;
+    transition: all 0.5s ease-in-out;
+}
+#resume #container button:hover{
+    background-color:#2DCC70;
+    font-weight:bold;
+    transition: all 0.5s ease-in-out;
+    transform:scale(1.2);
+    border-radius:5px;
+    border:3px double #383838;
+    cursor:pointer;
+}
+/*End Resume*/
+
+
+/*Start Education*/
+#education{
+    margin:0px;
+    background-color:rgb(255, 255, 255);
+    overflow:hidden;
+    position:relative;
+}
+#education #container #myEdu  {
+width:100%;
+}
+#education #container #myEdu #one{
+    width:50%;
+    float:left;
+}
+#education #container #myEdu #two{
+    width:50%;
+    float:right;
+}
+#education #container #myEdu #two h3{
+    font-size:22px;
+    color:#464646;
+}
+#education #container #myEdu #two h4{
+    color:#6d6d6d
+}
+#education #container #myEdu #two span{
+    display:block;
+    background-color:#2DCC70;
+    width:70px;
+    height:28px;
+    text-align:center;
+    color:white;
+    padding-top:4.5px;
+}
+#education #container #myExp{
+    width:100%;
+}
+#education #container #myExp #one{
+    width:50%;
+    float:left;
+}
+#education #container #myExp #two{
+    width:50%;
+    float:right;
+}
+#education #container #myExp #two h3{
+    font-size:22px;
+    color:#464646;
+}
+#education #container #myExp #two h4{
+    color:#6d6d6d
+}
+#education #container #myExp #two span{
+    display:block;
+    background-color:#2DCC70;
+    width:70px;
+    height:28px;
+    text-align:center;
+    color:white;
+    padding-top:4.5px;
+}
+#education #container #myExp #one{
+    width:50%;
+    float:left;
+}
+#education #container #myExp #two {
+    width:50%;
+    float:right;
+}
+
+
+/*End Education*/
+
+
+/*Start Testimonials*/
+#testi{
+    background-color:#d6d4d4;
+    margin:0px;
+    overflow: hidden;
+    text-align:center;
+    position:relative;
+}
+#testi #container p{
+padding-top:30px;
+font-size:20px;
+color:rgb(46, 46, 46);
+font-style:italic;
+}
+#testi #container h3{
+    color:rgb(46, 46, 46);
+}
+#testi #container ul{
+    list-style:square;
+}
+#testi #container ul li{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    border:1px solid #2DCC70;
+    transform: translate(-100%,-10%);
+}
+#testi #container ul li.active{
+    background-color: #2DCC70;
+    cursor:pointer
+}
+#testi #container li:hover {
+    background-color: #2DCC70;
+    cursor:pointer
+}
+/*End Testimonials*/
+
+
+/*Start Protfolio*/
+#protfolio{
+    position:relative;
+    margin:0px;
+    overflow:hidden;
+    text-align:center;
+    width:100%;
+    background-color:white;
+    padding-bottom:80px;
+
+}
+#protfolio #container h2{
+    font-size:40px;
+    color:rgb(80, 80, 80);
+}
+#protfolio #container p{
+    font-size:20px;
+    color:rgb(119, 119, 119)
+}
+#protfolio #container div{
+    width:100%;
+    position: relative;
+}
+#protfolio #container div div{
+    width:30%;
+    float:left;
+    border:3px solid rgb(150, 9, 9);
+    border-radius:5px;
+    margin:1px;
+}
+#protfolio #container div div img{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+#protfolio #container div{
+    overflow:hidden;
+}
+#protfolio #container img:hover{
+    transform: scale(1.3);
+    transition: all 0.4s ease-in-out;
+}
+/*End Protfolio*/
+
+
+/*Start Contact me*/
+#contact{
+    position:relative;
+    width:100%;
+    height:auto;
+    margin:0px;
+    background-color:#252F31;
+    overflow: hidden;
+}
+#contact #container #one{
+width:40%;
+float:left;
+margin:40px 20px;
+color:white;
+}
+#contact #container #one h2{
+    color:white;
+    font-size:40px;
+}
+#contact #container #one p{
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif
+}
+#contact #container #one span:nth-of-type(1),
+#contact #container #one span:nth-of-type(2),
+#contact #container #one span:nth-of-type(3){
+    margin-bottom: 10px;
+    font-size:20px;
+}
+#contact #container #one span:nth-of-type(4),
+#contact #container #one span:nth-of-type(5){
+    margin-bottom: 10px;
+    font-size:20px;
+    color: rgb(110, 110, 110);
+}
+#contact #container #two{
+margin-top:30px;
+width:50%;
+float:right;
+color:rgb(180, 180, 180);
+}
+#contact #container #two ul{
+    list-style:none;
+}
+#contact #container #two li{
+    margin:30px;
+    font-size:20px;
+}
+#contact #container #two input{
+    display:block;
+    width:580px;
+    height:50px;
+    background-color:#4B5557;
+    border:none;
+    margin-top:10px;
+    color:white;
+}
+#contact #container #two textarea{
+    width:580px;
+    height:300px;
+    background-color:#4B5557;
+    border:none;
+    margin-top:10px;
+    color:white;
+}
+#contact #container #two #re{
+    height:300px;
+    resize: both;
+}
+#contact #container #two button{
+    width:180px;
+    height:50px;
+    border:1px solid white;
+    background: none;
+    color:white;
+    font-size: 22px;
+    margin-top:22px;
+    margin-left:270px;
+    margin-bottom:35px;
+}
+#contact #container #two button:hover{
+    background-color:#4B5557;
+    cursor: pointer;
+    color:rgb(32, 32, 32);
+}
+/*End Contact me*/
+
+
+/*Start Footer*/
+#footer{
+    background-color:#191E22;
+    overflow:hidden;
+    position:relative;
+    margin:0px;
+    height:50px;
+    color:white;
+}
+#footer #container p {
+    float:left;
+    width:70%;
+    position:relative;
+    left:124px;
+}
+#footer #container div{
+width:30%;
+float:right;
+position:relative;
+right: 165px;
+padding: 11px;
+padding-left: 121px;
+}
+#footer #container div i{
+    padding-left:17px;
+    color:#f0f0f0;
+    opacity:0.7
+}
+#footer #container div i:hover{
+opacity:1;
+}
+/*End Footer*/
