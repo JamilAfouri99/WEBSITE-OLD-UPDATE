@@ -76,7 +76,7 @@ var Submit=document.getElementById("Submit"),
                 var r=prompt("Copy this signiture to prove your information \n 'YES'\n Thank you");
                 if(r==="YES"){
                     e.preventDefault();
-                    console.log(location.href="https://jamilafouri99.github.io/Updated/");
+                    console.log(location.href="https://jamilafouri99.github.io/WEBSITE-OLD-UPDATE/");
                 }else{
                     alert("sorry but you are not sure about your");
                     e.preventDefault();
